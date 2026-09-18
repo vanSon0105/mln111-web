@@ -1,3 +1,5 @@
 .agents/
 skills-lock.json
 .tmp_slices/
+.tmp_check/
+.vscode/
