@@ -669,6 +669,14 @@ footer[id] {
   background: #dbd3c2;
 }
 
+.humanity-section {
+  padding: 64px 0 76px;
+}
+
+.humanity-grid {
+  margin-top: 32px;
+}
+
 /* ---------- Nguyên tắc A/B/C ---------- */
 .principle__letter {
   font-family: var(--f-head);
@@ -855,12 +863,39 @@ footer[id] {
   position: relative;
   min-height: 470px;
 }
+
+.proof-banner__quote {
+  position: absolute;
+  right: 48px;
+  bottom: 60px;
+  width: 55%;
+  text-align: center;
+  color: #f0ebe0;
+  z-index: 2;
+}
+
+.proof-banner__quote p {
+  font-family: var(--f-body);
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.proof-banner__quote span {
+  text-align: right;
+  display: block;
+  margin-top: 12px;
+  font-family: var(--f-body);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+}
 .proof-banner__media img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 5% center;
   -webkit-mask-image: linear-gradient(to right, #000 72%, transparent 100%);
   mask-image: linear-gradient(to right, #000 72%, transparent 100%);
 }
@@ -1258,6 +1293,68 @@ footer[id] {
   letter-spacing: 0.01em;
   color: var(--red);
   margin-bottom: 44px;
+}
+
+/* ============================================================
+   08 · TỔNG KẾT
+   ============================================================ */
+.summary-section {
+  background: var(--navy);
+  color: #f0ebe0;
+  padding: 76px 0 78px;
+}
+
+.summary-head {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  margin-bottom: 32px;
+}
+
+.summary-head__num {
+  font-family: var(--f-head);
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1;
+  color: #b45e5a;
+}
+
+.summary-head__title {
+  font-family: var(--f-head);
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1;
+  color: #f0ebe0;
+}
+
+.summary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.summary-item {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  column-gap: 2px;
+  align-items: start;
+}
+
+.summary-item__num {
+  font-family: var(--f-font-sub);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.8;
+  color: #b45e5a;
+}
+
+.summary-item p {
+  max-width: 980px;
+  font-family: var(--f-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(240, 235, 224, 0.72);
 }
 
 /* ============================================================
