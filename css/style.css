@@ -43,6 +43,52 @@ html {
   overflow-x: hidden;
 }
 
+.back-to-top {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+
+  background: #30364f;
+  color: #f0ebe0;
+
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease,
+    background 0.2s ease;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: #414965;
+}
+
 body {
   overflow-x: clip;
   font-family: var(--f-body);
