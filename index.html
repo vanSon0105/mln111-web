@@ -32,6 +32,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <button class="back-to-top" id="backToTop" aria-label="Về đầu trang">
@@ -178,7 +183,7 @@
 
       <section class="band band--cream">
         <div class="container">
-          <p class="label label--red reveal">ĐẶC TRƯNG CỦA GIAI CẤP</p>
+          <p class="label label--red reveal dactrung">ĐẶC TRƯNG CỦA GIAI CẤP</p>
           <div class="grid-2 feature-grid">
             <article class="feature reveal">
               <span class="feature__num">01</span>
@@ -435,7 +440,7 @@
               </p>
             </div>
             <div class="hands-banner__col reveal" data-delay="2">
-              <p class="label label--red label--on-dark">NGHĨA RỘNG</p>
+              <p class="label label--red label--on-dark">NGHĨA HẸP</p>
               <h3 class="hands-banner__sub">DÂN TỘC – TỘC NGƯỜI</h3>
               <p>
                 Một thành phần dân cư trong quốc gia. Ví dụ: Tày, Ê-đê, Khmer…
@@ -461,7 +466,7 @@
               data-delay="1"
               aria-hidden="true"
             >
-              <span>→</span><span>←</span>
+              <i class="fa-solid fa-right-left"></i>
             </div>
             <div class="reveal" data-delay="2">
               <h3 class="h-red">LIÊN HIỆP HỘI NHẬP</h3>
@@ -637,7 +642,7 @@
           </div>
 
           <div class="note note--on-cream reveal">
-            <p>
+            <p class="tongketquanhe">
               <em
                 >→ Quan hệ giai cấp và dân tộc là quan hệ biện chứng hai chiều:
                 giai cấp quyết định dân tộc, nhưng dân tộc cũng có tính độc lập
@@ -681,7 +686,7 @@
         </div>
       </section>
 
-      <!-- ============ 05 · DẪN CHỨC THỰC TIỄN ============ -->
+      <!-- ============ 05 · DẪN CHỨNG THỰC TIỄN ============ -->
       <section class="proof-banner" id="danchung">
         <div class="proof-banner__grid">
           <figure class="proof-banner__media">
@@ -693,8 +698,8 @@
 
             <div class="proof-banner__quote">
               <p>
-                “Giải phóng dân tộc mới giải phóng được giai cấp,<br />
-                giải phóng giai cấp mới giải phóng được con người”
+                "Giải phóng dân tộc mới giải phóng được giai cấp, <br />
+                giải phóng giai cấp mới giải phóng dân tộc triệt để."
               </p>
               <span>– TƯ TƯỞNG HỒ CHÍ MINH –</span>
             </div>
@@ -703,7 +708,7 @@
             <div class="sec-head sec-head--inline">
               <span class="sec-head__num sec-head__num--ghost-dark">05</span>
               <h2 class="sec-head__title sec-head__title--light">
-                DẪN CHỨC THỰC TIỄN
+                DẪN CHỨNG THỰC TIỄN
               </h2>
             </div>
             <ol class="timeline">
@@ -737,9 +742,6 @@
                 </p>
               </li>
             </ol>
-            <p class="proof-banner__watermark" aria-hidden="true">
-              VIỆT NAM — THỰC TIỄN CÁCH MẠNG
-            </p>
           </div>
         </div>
       </section>
@@ -884,7 +886,7 @@
           </div>
 
           <div class="conclusion reveal">
-            <p class="label label--ink">KẾT LUẬN</p>
+            <p class="ketluan">KẾT LUẬN</p>
             <p class="conclusion__text">
               Giai cấp và nhà nước tiêu vong cùng nhau (vì nhà nước là công cụ
               của giai cấp thống trị); còn dân tộc vì là cộng đồng văn hóa, lịch
@@ -1094,6 +1096,21 @@
               </p>
             </article>
           </div>
+          <div class="counter-summary reveal">
+            <p>
+              Ba lý thuyết trên đã phản ánh những biểu hiện khác nhau của phân
+              tầng và bất bình đẳng xã hội, nhưng chưa lý giải đầy đủ nguồn gốc
+              kinh tế – xã hội của chúng. Theo quan điểm Mác – Lênin, quan hệ sở
+              hữu đối với tư liệu sản xuất giữ vai trò nền tảng trong sự hình
+              thành và phân chia giai cấp. Từ đó có thể lý giải sâu hơn địa vị
+              và quyền lực mà Weber đề cập, lý giải vì sao người lao động có thể
+              trực tiếp tạo ra của cải nhưng không tương xứng trong hưởng thụ so
+              với cách Davis &amp; Moore nhìn nhận bất bình đẳng, đồng thời cho
+              thấy những cuộc “thay thế tinh hoa” của Pareto &amp; Mosca chưa
+              nhất thiết làm thay đổi cơ sở của quan hệ giai cấp nếu các quan hệ
+              kinh tế nền tảng vẫn được duy trì.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -1138,7 +1155,7 @@
           <p class="label label--red critique__label reveal">
             PHÊ PHÁN NỘI BỘ – LÊNIN
           </p>
-          <p class="reveal" data-delay="1">
+          <p class="reveal phephan" data-delay="1">
             Lênin phê phán hai khuynh hướng lệch lạc về dân tộc trong phong trào
             cộng sản:
           </p>
@@ -1151,7 +1168,7 @@
               />
               <div>
                 <h3 class="critique-card__title">CHỦ NGHĨA SÔ-VANH NƯỚC LỚN</h3>
-                <p>
+                <p class="chunghia">
                   Chủ nghĩa dân tộc của dân tộc lớn, mạnh, áp đặt lên các dân
                   tộc khác – vi phạm nguyên tắc bình đẳng dân tộc.
                 </p>
@@ -1193,7 +1210,7 @@
       <!-- ============ MỞ RỘNG ============ -->
       <section class="band band--cream extend">
         <div class="container">
-          <p class="label label--red reveal">MỞ RỘNG</p>
+          <p class="label label--red reveal morong">MỞ RỘNG</p>
           <h3 class="extend__title reveal" data-delay="1">
             GIAI CẤP – DÂN TỘC – NHÂN LOẠI<br /><span class="t-red"
               >TRONG BỐI CẢNH TOÀN CẦU HÓA HIỆN NAY</span
@@ -1201,16 +1218,16 @@
           </h3>
           <div class="grid-3 feature-grid extend__grid">
             <article class="feature reveal">
-              <span class="feature__num">01</span>
-              <p>
+              <span class="morong__num">01</span>
+              <p class="morong__p">
                 Toàn cầu hóa kinh tế làm cho đấu tranh giai cấp mang tính xuyên
                 quốc gia hơn (chuỗi cung ứng toàn cầu, công nhân nhiều nước cùng
                 chịu tác động từ các tập đoàn tư bản xuyên quốc gia).
               </p>
             </article>
             <article class="feature reveal" data-delay="1">
-              <span class="feature__num">02</span>
-              <p>
+              <span class="morong__num">02</span>
+              <p class="morong__p">
                 Xu hướng dân tộc chủ nghĩa, bảo hộ mậu dịch trỗi dậy ở nhiều
                 nước như một phản ứng với toàn cầu hóa – minh chứng cho tính
                 thời sự của quy luật biện chứng “phân lập – liên hiệp” mà Lênin
@@ -1218,8 +1235,8 @@
               </p>
             </article>
             <article class="feature reveal" data-delay="2">
-              <span class="feature__num">03</span>
-              <p>
+              <span class="morong__num">03</span>
+              <p class="morong__p">
                 Các vấn đề chung của toàn nhân loại (biến đổi khí hậu, đại dịch,
                 an ninh mạng…) đòi hỏi hợp tác vượt qua biên giới giai cấp – dân
                 tộc, nhưng cách các quốc gia giải quyết những vấn đề này trên
