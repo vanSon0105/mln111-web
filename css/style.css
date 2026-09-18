@@ -1569,6 +1569,7 @@ footer[id] {
   }
   .sec-intro__media {
     margin-right: 0;
+    right: 0;
   }
   .dark-banner__media {
     width: 100%;
@@ -1617,54 +1618,198 @@ footer[id] {
 }
 
 @media (max-width: 760px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  /* ---------- HEADER ---------- */
+  .header-inner {
+    height: 60px;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
   .top-nav {
     display: none;
   }
+
+  .menu-btn {
+    margin-left: auto;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    height: auto;
+    min-height: auto;
+  }
+
   .hero__grid {
     grid-template-columns: 1fr;
-    padding-top: 56px;
+    padding-top: 36px;
   }
+
   .hero__content {
-    padding-bottom: 40px;
+    padding-bottom: 0;
   }
+
+  .hero__title {
+    font-size: clamp(52px, 15vw, 76px);
+    line-height: 1;
+  }
+
+  .hero__content .btn-primary {
+    width: 100%;
+    justify-content: center;
+    margin-top: 32px;
+  }
+
   .hero__media {
+    position: relative;
+    top: 0;
+    right: auto;
     margin-right: 0;
+    width: 100%;
   }
+
   .hero__media img {
-    margin: 0 auto;
+    width: 115%;
+    max-width: none;
+    margin-left: auto;
   }
+
+  /* ---------- SECTION HEAD ---------- */
+  .sec-head {
+    gap: 14px;
+  }
+
+  .sec-head__num {
+    font-size: 42px;
+    flex-shrink: 0;
+  }
+
+  .sec-head__title {
+    font-size: clamp(36px, 11vw, 52px);
+  }
+
+  /* ---------- GRID ---------- */
   .grid-2,
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
-  .sec-head {
-    gap: 18px;
+
+  /* ---------- TEXT ---------- */
+  .lead {
+    font-size: 16px;
+    line-height: 1.7;
   }
-  .duo-grid {
-    gap: 40px;
+
+  .h-red,
+  .h-navy {
+    font-size: 23px;
   }
-  .counter-head {
-    flex-direction: column;
-    gap: 8px;
+
+  /* ---------- FLOW ---------- */
+  .flow {
+    gap: 14px;
+    margin-top: 48px;
   }
-  .counter__top img {
-    width: 96px;
-  }
-  .critique-card {
-    flex-direction: column;
-  }
-  .critique-card img {
-    width: 200px;
-  }
+
   .flow__step {
     white-space: normal;
   }
-  .cta__title {
-    font-size: 32px;
+
+  /* ---------- PROOF ---------- */
+  .proof-banner__grid {
+    grid-template-columns: 1fr;
   }
+
+  .proof-banner__media {
+    min-height: 300px;
+  }
+
+  .proof-banner__body {
+    padding: 40px 20px;
+  }
+
+  .proof-banner__quote {
+    right: 20px;
+    bottom: 30px;
+    width: calc(100% - 40px);
+  }
+
+  .proof-banner__quote p {
+    font-size: 14px;
+  }
+
+  .proof-banner__quote span {
+    font-size: 11px;
+  }
+
+  .timeline__item {
+    grid-template-columns: 52px 1fr;
+    gap: 12px;
+  }
+
+  .timeline__year {
+    font-size: 24px;
+  }
+
+  .timeline__item p {
+    padding-left: 14px;
+    font-size: 14px;
+  }
+
+  /* ---------- SUMMARY ---------- */
+  .summary-section {
+    padding: 56px 0;
+  }
+
+  .summary-head {
+    gap: 20px;
+  }
+
+  .summary-head__num {
+    font-size: 44px;
+  }
+
+  .summary-head__title {
+    font-size: 38px;
+  }
+
+  .summary-item {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .summary-item p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* ---------- BACK TO TOP ---------- */
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+  }
+
+  /* ---------- FOOTER ---------- */
   .site-footer {
-    padding: 64px 0 140px;
+    padding: 64px 0 100px;
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .site-footer__watermark {
+    font-size: 100px;
   }
 }
