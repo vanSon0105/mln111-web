@@ -373,21 +373,24 @@ footer[id] {
    HERO
    ============================================================ */
 .hero {
-  height: 100vh;
+  height: calc(100dvh - var(--header-h));
   background: var(--cream);
   overflow: hidden;
 }
 
 .hero__grid {
+  height: 100%;
+
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  align-items: end;
+  align-items: center;
+
   gap: 24px;
-  padding: 30px 0 39px;
+  padding: 30px 0 0;
 }
 
 .hero__content {
-  padding-bottom: 88px;
+  padding-bottom: 0px;
 }
 .eyebrow {
   font-family: var(--f-barlow);
@@ -414,14 +417,17 @@ footer[id] {
 
 .hero__media {
   position: relative;
-  top: -50px;
-  right: 170px;
+  top: 0;
+  right: 250px;
+
   align-self: end;
+
   margin-right: calc(-1 * max(24px, (100vw - 1240px) / 2));
 }
+
 .hero__media img {
-  width: 130%;
-  max-width: 800px;
+  width: 140%;
+  max-width: 880px;
   margin-left: auto;
 }
 
@@ -577,6 +583,10 @@ footer[id] {
   line-height: 1;
   margin-bottom: 10px;
   letter-spacing: 0.18px;
+}
+
+.grid-giaicap {
+  gap: 48px 88px;
 }
 
 .tongketquanhe {
@@ -1136,6 +1146,19 @@ footer[id] {
    RIÊNG PHẦN 06 · LỊCH SỬ
    ============================================================ */
 
+.era-table tbody tr {
+  height: 105px;
+}
+
+.era-table tbody th {
+  padding: 20px 28px 20px 0;
+}
+
+.era-table tbody td {
+  padding: 20px 32px 20px 0;
+  line-height: 1.6;
+}
+
 .era-table__period {
   width: 17%;
   color: var(--ink);
@@ -1151,12 +1174,12 @@ footer[id] {
   width: 41.5%;
 }
 
-.era-table tbody tr:nth-child(even) {
-  background: #eae4d9;
-}
-
 .era-table tbody td:nth-child(3) {
   color: #4a4c5a;
+}
+
+.era-table tr.is-hot {
+  background: #eae4d9;
 }
 
 .era-table tr.is-hot th {
