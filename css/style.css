@@ -16,7 +16,7 @@
   --quote-red: #8d291d; /* banner trích dẫn */
   --gold: #b79369; /* số chương / mũi tên */
   --gold-deep: #9a6820; /* chữ vàng đậm */
-  --navy-txt: #1a2e42; /* chữ navy */
+  --navy-txt: #1e3858; /* chữ navy */
   --ink: #1a1512; /* chữ đậm nhất */
   --body-c: #4a3c30; /* chữ thân bài */
   --ghost: #d8ccb9; /* số chương mờ trên nền sáng */
@@ -488,7 +488,7 @@ footer[id] {
   padding: 60px 0;
 }
 .band--greige {
-  background: var(--cream);
+  background: var(--greige);
   padding: 104px 0;
 }
 .band--tight {
@@ -1029,61 +1029,6 @@ footer[id] {
 /* ============================================================
    06 · LỊCH SỬ CÁC THỜI KỲ (bảng)
    ============================================================ */
-.table-scroll {
-  overflow-x: auto;
-}
-
-.era-table,
-.cmp-table {
-  width: 100%;
-  min-width: 720px;
-  border-collapse: collapse;
-}
-.era-table thead th,
-.cmp-table thead th {
-  text-align: left;
-  font-family: var(--f-nunito);
-  font-size: 16px;
-  font-weight: 500;
-  padding: 0 24px 14px;
-  border-bottom: 3px solid var(--red);
-}
-.era-table__period {
-  color: var(--ink);
-  width: 200px;
-}
-.era-table__class {
-  color: var(--red);
-}
-.era-table__nation {
-  color: var(--navy-txt);
-}
-
-.era-table tbody th,
-.cmp-table tbody th {
-  text-align: left;
-  font-family: var(--f-nunito);
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-  color: #1a1512;
-  vertical-align: middle;
-  padding: 20px 20px;
-}
-.era-table tbody td,
-.cmp-table tbody td {
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--body-c);
-  vertical-align: middle;
-  padding: 20px 24px;
-}
-.era-table tbody tr:nth-child(even) {
-  background: #eae4d9;
-}
-.era-table tr.is-hot th {
-  color: var(--red);
-}
 
 .conclusion {
   margin-top: 72px;
@@ -1113,6 +1058,162 @@ footer[id] {
   margin-bottom: 48px;
 }
 
+#sosanh {
+  background-color: var(--cream);
+}
+
+/* ============================================================
+   06 + 07 · TABLES
+   ============================================================ */
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.era-table,
+.cmp-table {
+  width: 100%;
+  min-width: 720px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+/* ===== Header chung ===== */
+
+.era-table thead th,
+.cmp-table thead th {
+  text-align: left;
+  vertical-align: middle;
+
+  font-family: var(--f-nunito);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+
+  padding: 0 20px 16px 0;
+
+  border-bottom: 3px solid var(--red);
+}
+
+/* ===== Body chung ===== */
+
+.era-table tbody tr,
+.cmp-table tbody tr {
+  height: 80px;
+}
+
+.era-table tbody th,
+.cmp-table tbody th {
+  text-align: left;
+  vertical-align: middle;
+
+  font-family: var(--f-nunito);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+
+  color: var(--ink);
+
+  padding: 0px 28px 0px 0;
+}
+
+.era-table tbody td,
+.cmp-table tbody td {
+  vertical-align: middle;
+
+  font-family: var(--f-nunito);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  color: var(--body-c);
+
+  padding: 0px 32px 0px 0;
+}
+
+/* ============================================================
+   RIÊNG PHẦN 06 · LỊCH SỬ
+   ============================================================ */
+
+.era-table__period {
+  width: 17%;
+  color: var(--ink);
+}
+
+.era-table th:nth-child(2),
+.era-table td:nth-child(2) {
+  width: 41.5%;
+}
+
+.era-table th:nth-child(3),
+.era-table td:nth-child(3) {
+  width: 41.5%;
+}
+
+.era-table tbody tr:nth-child(even) {
+  background: #eae4d9;
+}
+
+.era-table tbody td:nth-child(3) {
+  color: #4a4c5a;
+}
+
+.era-table tr.is-hot th {
+  color: var(--red);
+}
+
+.era-table__class {
+  font-weight: 800 !important;
+  color: var(--red);
+}
+
+.era-table__nation {
+  font-weight: 800 !important;
+  color: var(--navy-txt);
+}
+
+/* ============================================================
+   RIÊNG PHẦN 07 · SO SÁNH
+   ============================================================ */
+
+.cmp-table th:nth-child(1),
+.cmp-table td:nth-child(1) {
+  width: 17%;
+}
+
+.cmp-table th:nth-child(2),
+.cmp-table td:nth-child(2) {
+  width: 42%;
+}
+
+.cmp-table th:nth-child(3),
+.cmp-table td:nth-child(3) {
+  width: 41%;
+}
+
+.cmp-table thead th {
+  color: var(--ink);
+}
+
+.cmp-table thead th.c-red {
+  font-weight: 800;
+  color: var(--red);
+}
+
+.cmp-table thead th.c-navy {
+  font-weight: 800;
+  color: var(--navy-txt);
+}
+
+.cmp-table tbody tr:nth-child(even) {
+  background: var(--greige);
+}
+
+.cmp-table tbody td:nth-child(3) {
+  color: #4a4c5a;
+}
+
 .compare__sub {
   font-family: var(--f-barlow);
   font-size: 24px;
@@ -1120,32 +1221,13 @@ footer[id] {
   letter-spacing: 0.03em;
   color: var(--ink);
   margin: 76px 0 17px;
-  border-bottom: 3px solid #a34235;
-  padding-bottom: 40px;
+  padding-bottom: 25px;
 }
 .compare .compare__sub:first-of-type {
   margin-top: 0;
 }
 .ghost-inline {
   color: #c9bca4;
-}
-
-.cmp-table thead th {
-  color: var(--ink);
-}
-.cmp-table thead th.c-red {
-  font-weight: 800;
-  color: var(--red);
-}
-.cmp-table thead th.c-navy {
-  font-weight: 800;
-  color: var(--navy-txt);
-}
-.cmp-table tbody th {
-  width: 220px;
-}
-.cmp-table tbody tr:nth-child(even) {
-  background: var(--greige);
 }
 
 .counter-head {
