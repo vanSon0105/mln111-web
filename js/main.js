@@ -97,16 +97,16 @@
   }
 
   /* ---------- Nút "Vào phần Luyện Tập" (chưa có trang luyện tập) ---------- */
-  var practiceBtn = document.getElementById("practiceBtn");
-  if (practiceBtn) {
-    practiceBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      practiceBtn.classList.add("is-wip");
-      setTimeout(function () {
-        practiceBtn.classList.remove("is-wip");
-      }, 900);
-    });
-  }
+  // var practiceBtn = document.getElementById("practiceBtn");
+  // if (practiceBtn) {
+  //   practiceBtn.addEventListener("click", function (e) {
+  //     e.preventDefault();
+  //     practiceBtn.classList.add("is-wip");
+  //     setTimeout(function () {
+  //       practiceBtn.classList.remove("is-wip");
+  //     }, 900);
+  //   });
+  // }
 })();
 
 const backToTop = document.getElementById("backToTop");
