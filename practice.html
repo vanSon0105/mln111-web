@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luyện tập trắc nghiệm – MLN111 · Chương 3</title>
+    <meta
+      name="description"
+      content="Luyện tập trắc nghiệm Chương 3 môn MLN111 (Giai cấp & Dân tộc): chọn đáp án, biết ngay đúng sai, có theo dõi tiến độ học thuộc."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/practice.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%238C1A1A'/><text x='50' y='72' font-size='62' text-anchor='middle' fill='%23F0EBE0' font-family='serif' font-weight='bold'>M</text></svg>"
+    />
+  </head>
+
+  <body class="practice">
+    <!-- ============ HEADER ============ -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">MLN111 - CHƯƠNG 3</a>
+        <nav class="top-nav" aria-label="Điều hướng">
+          <a class="top-nav__link practice-back" href="index.html">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            Về bài học
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="practice-main">
+      <!-- ============ TIẾN ĐỘ ============ -->
+      <section class="band band--greige">
+        <div class="container">
+          <p class="label label--red practice-label">LUYỆN TẬP · TRẮC NGHIỆM</p>
+          <h1 class="practice-title">Tiến độ học thuộc</h1>
+
+          <!-- Trạng thái đang tải / lỗi -->
+          <p class="practice-msg" id="loadMsg" role="status">
+            Đang đọc <code>ques.md</code>…
+          </p>
+
+          <!-- Nội dung chính, ẩn cho tới khi nạp xong dữ liệu -->
+          <div id="practiceApp" hidden>
+            <div class="progress-head">
+              <p class="progress-head__pct">
+                <span id="statPct">0%</span>
+              </p>
+              <p class="progress-head__count">
+                Đã thuộc <strong id="statKnown">0</strong>/<span id="statTotal"
+                  >0</span
+                >
+                câu
+              </p>
+            </div>
+
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+              aria-label="Tiến độ học thuộc"
+              id="progressBar"
+            >
+              <span class="progress-bar__fill" id="progressFill"></span>
+            </div>
+
+            <div class="stat-grid">
+              <div class="stat stat--known">
+                <span class="stat__num" id="statKnownBox">0</span>
+                <span class="stat__label">Đã thuộc</span>
+              </div>
+              <div class="stat stat--learning">
+                <span class="stat__num" id="statLearning">0</span>
+                <span class="stat__label">Cần học lại</span>
+              </div>
+              <div class="stat stat--idle">
+                <span class="stat__num" id="statIdle">0</span>
+                <span class="stat__label">Chưa học</span>
+              </div>
+            </div>
+
+            <div class="practice-controls">
+              <button
+                type="button"
+                class="chip-btn"
+                id="filterBtn"
+                aria-pressed="false"
+              >
+                <i class="fa-solid fa-filter" aria-hidden="true"></i>
+                Chỉ câu chưa thuộc
+              </button>
+              <button
+                type="button"
+                class="chip-btn"
+                id="shuffleBtn"
+                aria-pressed="false"
+              >
+                <i class="fa-solid fa-shuffle" aria-hidden="true"></i>
+                Xáo trộn
+              </button>
+              <button type="button" class="chip-btn chip-btn--danger" id="resetBtn">
+                <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
+                Đặt lại tiến độ
+              </button>
+            </div>
+
+            <p class="chip-legend">
+              <span class="chip-legend__item"
+                ><i class="dot dot--known"></i>Đã thuộc</span
+              >
+              <span class="chip-legend__item"
+                ><i class="dot dot--learning"></i>Cần học lại</span
+              >
+              <span class="chip-legend__item"
+                ><i class="dot dot--idle"></i>Chưa học</span
+              >
+            </p>
+            <div
+              class="chip-grid"
+              id="chipGrid"
+              role="group"
+              aria-label="Danh sách câu hỏi"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ THẺ CÂU HỎI ============ -->
+      <section class="band band--cream practice-card-zone" id="cardZone" hidden>
+        <div class="container">
+          <div class="card-topline">
+            <p class="card-counter" id="cardCounter">Thẻ 1 / 1</p>
+            <span class="card-status" id="cardStatus"></span>
+          </div>
+
+          <div class="quiz" id="card">
+            <span class="quiz__num" id="cardNum">CÂU 01</span>
+            <p class="quiz__q" id="cardQuestion"></p>
+            <ul class="quiz__options" id="cardOptions"></ul>
+
+            <div class="quiz__feedback" id="feedback" hidden>
+              <p class="quiz__verdict" id="verdict" aria-live="polite"></p>
+              <p class="quiz__sub" id="verdictSub"></p>
+              <div class="quiz__explain" id="cardExplainWrap" hidden>
+                <p class="quiz__explain-label">GIẢI THÍCH</p>
+                <p class="quiz__explain-text" id="cardExplain"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-nav">
+            <button type="button" class="nav-btn" id="prevBtn">
+              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Trước
+            </button>
+            <button type="button" class="nav-btn nav-btn--primary" id="nextBtn">
+              Câu tiếp theo
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <p class="kbd-help">
+            Phím tắt: <kbd>A</kbd> <kbd>B</kbd> <kbd>C</kbd> <kbd>D</kbd> (hoặc
+            <kbd>1</kbd>–<kbd>4</kbd>) chọn đáp án · <kbd>←</kbd> <kbd>→</kbd> chuyển
+            câu · <kbd>Enter</kbd> câu tiếp theo
+          </p>
+        </div>
+      </section>
+
+      <!-- Trạng thái hoàn thành bộ lọc -->
+      <section class="band band--cream practice-done" id="doneZone" hidden>
+        <div class="container">
+          <p class="done-emoji" aria-hidden="true">🎉</p>
+          <h2 class="done-title" id="doneTitle">Xong rồi!</h2>
+          <p class="done-text" id="doneText"></p>
+          <div class="practice-controls practice-controls--center">
+            <button type="button" class="chip-btn" id="doneShowAllBtn">
+              <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+              Xem lại tất cả
+            </button>
+            <button type="button" class="chip-btn chip-btn--danger" id="doneResetBtn">
+              <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
+              Học lại từ đầu
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer practice-footer">
+      <div class="container site-footer__inner">
+        <p class="site-footer__logo">
+          GIAI CẤP<br /><span>DÂN TỘC</span><br />NHÂN LOẠI
+        </p>
+        <div class="site-footer__info">
+          <p class="label label--tan">LUYỆN TẬP TRẮC NGHIỆM</p>
+          <p>
+            Bộ 25 câu hỏi ôn tập Chương 3.<br />Tiến độ được lưu ngay trên trình
+            duyệt của bạn.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/practice.js"></script>
+  </body>
+</html>
